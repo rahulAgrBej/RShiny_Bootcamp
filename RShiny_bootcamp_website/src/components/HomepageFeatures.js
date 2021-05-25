@@ -4,32 +4,29 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'No coding experience required',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Absolutely no previous computer science or coding experience needed! So you can focus on delivering the analysis and visuals that are important to your work!
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Based in R',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        R is one of the most popular languages used in statistical analysis and research. Our whole program is built on R so that you can easily integrate your research visuals into the platforms you build.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Learn by doing',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Learn by actually creating a data analytics platform from start to end.
       </>
     ),
   },
