@@ -24,7 +24,6 @@ server <- function(input, output) {
   # Dynamically creates a country multi selector for GDP page
   output$countrySelectGDP <- renderUI({
     countryList <- getCountryList(dataInput())
-    print(countryList)
     multiInput(inputId='countries_gdp',
                label='Choose Countries:',
                choices=countryList$Country,

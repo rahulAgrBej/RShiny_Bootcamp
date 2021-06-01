@@ -10,6 +10,7 @@ gdpTab <- tabItem(
       uiOutput("countrySelectGDP")
     ),
     box(
+      h2('GDP per capita in (US $)'),
       plotOutput("gdpTimeline")
     )
   )

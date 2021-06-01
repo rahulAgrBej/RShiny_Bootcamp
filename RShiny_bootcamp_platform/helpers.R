@@ -30,5 +30,7 @@ getCountryList <- function(data) {
   countryList <- data %>%
     distinct(Country)
   
+  countryList <- c("Select All") %>%
+    rbind(countryList)
   return(countryList)
 }
