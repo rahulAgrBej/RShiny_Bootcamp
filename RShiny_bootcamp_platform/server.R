@@ -13,17 +13,13 @@ server <- function(input, output) {
     getData('data/idb_data.csv')
   })
   
+  output$gdpTimeline <- renderPlot({
+    generate_gdp_timeline(dataInput(), input$countries_gdp)
+  })
+  
   output$countryList <- reactive({
     getCountryList(dataInput())
-    print(getCountryList(dataInput()))
   })
-  
-  output$countryText <- renderText({
-    print("testing here")
-    print(input$test)
-    getText(input$test)
-  })
-  
   
   # Dynamically creates a country multi selector for GDP page
   output$countrySelectGDP <- renderUI({

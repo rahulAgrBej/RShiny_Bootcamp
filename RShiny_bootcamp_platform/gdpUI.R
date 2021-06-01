@@ -6,7 +6,11 @@ library(shinyWidgets)
 gdpTab <- tabItem(
   tabName='gdp',
   fluidRow(
-    uiOutput("countrySelectGDP"),
-    textOutput("countryText")
+    box(
+      uiOutput("countrySelectGDP")
+    ),
+    box(
+      plotOutput("gdpTimeline")
+    )
   )
 )

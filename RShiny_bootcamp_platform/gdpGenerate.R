@@ -26,9 +26,3 @@ generate_gdp_timeline <- function(data, countryList) {
     
   return(p)
 }
-
-fp <- 'data/idb_data.csv'
-test <- getData(fp)
-filtered <- generate_gdp_timeline(test, c('ARGENTINA', 'COLOMBIA'))
-plot(filtered)
-
