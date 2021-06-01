@@ -13,6 +13,7 @@ getData <- function(filePath) {
     rename(Indicator=Indicator_Name)
   
   data$Indicator <- gsub(': ', '_', data$Indicator)
+  data$Indicator <- gsub('\\$', '', data$Indicator)
   data$Indicator <- gsub(' ', '_', data$Indicator)
   data$Indicator <- gsub(',', '', data$Indicator)
   data$Indicator <- gsub('\\(', '', data$Indicator)
