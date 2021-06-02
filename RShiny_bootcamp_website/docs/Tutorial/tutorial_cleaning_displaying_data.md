@@ -1,6 +1,7 @@
 ---
 id: tutorial_cleaning_displaying_data
 title: 3.0-Cleaning and Displaying Data
+sidebar_position: 4
 ---
 
 ## Goals
