@@ -1,6 +1,6 @@
 ---
 id: tutorial_server_ui
-title: 2.1-RShiny Server and UI
+title: 2.0-RShiny Server and UI
 ---
 
 RShiny web applications are controlled by two main files: server.R and ui.R.

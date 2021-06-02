@@ -1,6 +1,7 @@
 ---
 id: tutorial_introduction
 title: 1-Introduction
+sidebar_position: 1
 ---
 
 # 1.0-Introduction
