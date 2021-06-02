@@ -1,9 +1,9 @@
 ---
 id: tutorial_introduction
-title: Introduction
+title: 1-Introduction
 ---
 
-# Tutorial Introduction
+# 1.0-Introduction
 
 Hi Everyone! This is the first lesson in our RShiny bootcamp series. The goal of this bootcamp is to provide any and everyone with the basic skills and resources necessary to understand, create and deploy their first data analytics platform. We will be building a web application.
 
