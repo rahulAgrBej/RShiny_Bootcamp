@@ -19,7 +19,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'syllabus',
           position: 'left',
           label: 'Tutorial',
         },
@@ -39,7 +39,7 @@ module.exports = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/syllabus',
             },
           ],
         },
