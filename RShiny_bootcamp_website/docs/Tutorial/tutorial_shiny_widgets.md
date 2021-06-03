@@ -17,7 +17,7 @@ Like most selector type inputs, our multiInput will require 4 key attributes: an
 
 Below is the code for our multiInput selector. It’s inputId is “countries_gdp”, its label is “Choose countries:”, and the choices is a list of countries which includes: Argentina, Colombia, MEXICO, PANAMA., our selected list is empty.
 
-```R
+```r
 library(shiny)
 library(shinydashboard)
 library(shinyWidget) # NOTE THIS EXTRA LIBRARY

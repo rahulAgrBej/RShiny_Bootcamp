@@ -17,7 +17,18 @@ For this lesson we will be using the tidyverse, which is a collection of R packa
 
 Below is a code snippet that will read in our data file:
 
-[CODE SNIPPET TO READ IN FILE]
+```r
+library(tidyverse)
+
+getData <- function(filePath) {
+    data <- read_csv(filePath)
+    
+    return(data)
+}
+
+dataPath <- 'data/idb_data.csv'
+data <- getData(dataPath)
+```
 
 Now that we have it available read in lets explore what it looks like. We have the following columns:
 - Country: states the country that this particular data record belongs to, ie “ARGENTINA” or “COLOMBIA”.
