@@ -7,6 +7,7 @@ sidebar_position: 3
 Text Inputs and output are just one example of the ways a user can interact with a web application. Here is a list of official RShiny widgets, and here is a list of customizable RShiny widgets (Note that if you are using any from the second list to use include “library(shinyWidgets)” at the top of your code file.
 
 Today we will be updating our “GDP Trends”, page creating a multiInput widget like the one below, from a custom list of countries.
+
 [ENTER IMAGE OF MULTI INPUT SELECTOR FOR COUNTRIES]
 
 Like most selector type inputs, our multiInput will require 4 key attributes: an inputId, label, choices, selected).
