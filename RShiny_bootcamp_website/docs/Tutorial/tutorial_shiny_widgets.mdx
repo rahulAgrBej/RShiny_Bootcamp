@@ -4,11 +4,13 @@ title: 2.1-RShiny Widgets
 sidebar_position: 3
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 Text Inputs and output are just one example of the ways a user can interact with a web application. Here is a list of official RShiny widgets, and here is a list of customizable RShiny widgets (Note that if you are using any from the second list to use include “library(shinyWidgets)” at the top of your code file.
 
 Today we will be updating our “GDP Trends”, page creating a multiInput widget like the one below, from a custom list of countries.
 
-<img src={useBaseUrl('/img/ui_to_user.svg')}/>
+<img src={useBaseUrl('/img/multiInputWidget.png')} height='300px'/>
 
 Like most selector type inputs, our multiInput will require 4 key attributes: an inputId, label, choices, selected).
 - inputId: A unique identifier that the server can use to pull the value selected
