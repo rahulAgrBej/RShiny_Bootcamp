@@ -15,9 +15,9 @@ The frontend (client side) is everything that a user can see on a website. The o
 The backend or (server side) is everything that is happening underneath that the user doesn’t see or notice. This entails everything from opening connections and includes but is not limited to storing, analyzing, and organizing data.
 
 When you access a web application you are interacting with the front end.
-
-[PICTURE OF USER ARROW TO FRONT END]
-
+<center>
+<img src='/img/User_to_UI.svg' height='300px' margin='0px' padding='0px'/>
+</center>
 The frontend takes your inputs (username, password, filter options, text) and information and passes it onto the backend.
 
 [PICTURE OF FRONT END TO BACKEND]
