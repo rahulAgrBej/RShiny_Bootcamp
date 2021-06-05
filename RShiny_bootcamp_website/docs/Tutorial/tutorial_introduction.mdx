@@ -3,6 +3,7 @@ id: tutorial_introduction
 title: 1.0-Introduction
 sidebar_position: 1
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Hi Everyone! This is the first lesson in our RShiny bootcamp series. The goal of this bootcamp is to provide any and everyone with the basic skills and resources necessary to understand, create and deploy their first data analytics platform. We will be building a web application.
 
@@ -15,20 +16,20 @@ The frontend (client side) is everything that a user can see on a website. The o
 The backend or (server side) is everything that is happening underneath that the user doesn’t see or notice. This entails everything from opening connections and includes but is not limited to storing, analyzing, and organizing data.
 
 When you access a web application you are interacting with the front end.
-<center>
-<img src='/img/User_to_UI.svg' height='300px' margin='0px' padding='0px'/>
-</center>
+
+<img src={useBaseUrl('/img/user_to_ui.svg')}/>
+
 The frontend takes your inputs (username, password, filter options, text) and information and passes it onto the backend.
 
-[PICTURE OF FRONT END TO BACKEND]
+<img src={useBaseUrl('/img/ui_to_server.svg')}/>
 
 The backend then takes the information sent to it and responds with the data or analysis that you requested.
 
-[PICTURE OF BACKEND TO FRONTEND]
+<img src={useBaseUrl('/img/server_to_ui.svg')}/>
 
 The front end accepts this information and presents it correctly to you.
 
-[PICTURE FRONTEND TO THE USER]
+<img src={useBaseUrl('/img/ui_to_user.svg')}/>
 
 ## What we will be creating
 
