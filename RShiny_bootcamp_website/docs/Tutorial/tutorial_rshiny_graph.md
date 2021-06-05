@@ -18,6 +18,7 @@ Lets copy paste the getData and generate_gdp_timeline functions we defined in te
 ```r
 library(tidyverse)
 library(shiny)
+library(reshape2)
 
 # function that reads and cleans our data
 getData <- function(filePath) {
@@ -229,6 +230,7 @@ dashboardPage(
 ```r
 library(shiny)
 library(tidyverse)
+library(reshape2)
 
 # function that reads and cleans our data
 getData <- function(filePath) {

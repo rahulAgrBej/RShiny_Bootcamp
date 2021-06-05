@@ -19,6 +19,7 @@ Below is a code snippet that will read in our data file:
 
 ```r
 library(tidyverse)
+library(reshape2)
 
 getData <- function(filePath) {
     data <- read_csv(filePath)
@@ -160,6 +161,7 @@ We have created a function that will read and clean our data set and another tha
 ## test.R code
 ```r
 library(tidyverse)
+library(reshape2)
 
 # function that reads and cleans our data
 getData <- function(filePath) {

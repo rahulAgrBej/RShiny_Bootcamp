@@ -140,6 +140,7 @@ gdpTab <- tabItem(
 ## gdpServer.R
 ```r
 library(tidyverse)
+library(reshape2)
 
 # function that generates a line plot based on data and countryList
 generate_gdp_timeline <- function(data, countryList) {
