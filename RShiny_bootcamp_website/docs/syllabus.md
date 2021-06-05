@@ -52,19 +52,18 @@ Below please find an overview of the lessons and resources we will be using thro
                 </ul></td>
             <td>
                 <ul>
-                    <li>RShiny Dashboard</li>
-                    <li>RShiny Widgets</li>
+                    <li><a href='https://rstudio.github.io/shinydashboard/get_started.html'>RShiny Dashboard</a></li>
+                    <li><a href='http://shinyapps.dreamrs.fr/shinyWidgets/'>RShiny Widgets</a></li>
                 </ul></td>
         </tr>
         <tr>
-            <td>RShiny, tidyverse and ggplot2 PART 1</td>
+            <td>RShiny, tidyverse and ggplot2</td>
             <td>
                 <ul>
                     <li>What is tidyverse? Why is it useful?</li>
                     <li>tidyverse operations</li>
                     <li>Introduction to ggplot2</li>
                     <li>Build and return first graph</li>
-                    <li>Facets and subsetting data</li>
                 </ul></td>
             <td>
                 <ul>
@@ -73,24 +72,10 @@ Below please find an overview of the lessons and resources we will be using thro
                 </ul></td>
         </tr>
         <tr>
-            <td>RShiny, tidyverse and ggplot2 PART 2</td>
+            <td>Organizing and Deploying</td>
             <td>
                 <ul>
-                    <li>Practice filtering, mutating and other operations on data</li>
-                    <li>Practice ggplot2</li>
-                    <li>File Structure/organization best practices</li>
-                </ul></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Development Strategies and Feedback loops</td>
-            <td>
-                <ul>
-                    <li>Ask client for a storyboard</li>
-                    <li>Ask for specifics</li>
-                    <li>Constant feedback is essential</li>
-                    <li>Build MVP first</li>
-                    <li>Google, stack overflow and github are your friends</li>
+                    <li>Organizing your files</li>
                 </ul></td>
             <td></td>
         </tr>
