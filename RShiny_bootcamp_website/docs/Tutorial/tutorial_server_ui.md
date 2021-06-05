@@ -20,6 +20,7 @@ Notice how we have inserted a sidebar and a body object in the dashboard. These 
 ```r
 library(shiny)
 library(shinydashboard)
+library(shinyWidgets)
 
 # Overall dashboard page
 dashboardPage(
@@ -186,6 +187,7 @@ Below is the code we have for ui.R so far. Try creating a file ui.R and server.R
 ```r
 library(shiny)
 library(shinydashboard)
+library(shinyWidgets)
 
 # Overview tabItem
 overviewTab <- tabItem(

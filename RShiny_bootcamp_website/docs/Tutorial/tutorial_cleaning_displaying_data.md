@@ -42,6 +42,9 @@ However not all data is R friendly. This means that it currently might have spac
 Here is a code snippet, explaining each line, that cleans this particular dataset, but sets a framework for how to do so for others as well:
 
 ```r
+library(tidyverse)
+library(reshape2)
+
 # function that will read in and clean data at a specific path
 getData <- function(filePath) {
   
@@ -117,7 +120,7 @@ Here is a code snippet explaining line for line how this is being accomplished:
 }
 
 linePlot <- generate_gdp_timeline(data)
-plot(data)
+plot(linePlot)
 ```
 
 ## Customizing Data Visualization
