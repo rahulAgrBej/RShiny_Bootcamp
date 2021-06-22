@@ -3,39 +3,26 @@ id: tutorial_introduction
 title: 1.0-Introduction
 sidebar_position: 1
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+## Goals
+- Understanding use of web applications
+- Why we are using R and RShiny
 
-Hi Everyone! This is the first lesson in our RShiny bootcamp series. The goal of this bootcamp is to provide any and everyone with the basic skills and resources necessary to understand, create and deploy their first data analytics platform. We will be building a web application.
 
-## What is a web application?
+## Our case study
+We are going to be following a case study example for our bootcamp. Let’s say we want to better understand and communicate Energy and Environmental Justice issues. Specifically, our goal is to better understand how Energy Burden fluctuates based on different variables.
 
-A web application is software that is run on an external web server. Now what is a web server? A web server is just a computer that is connected to the internet. At a high level there are two main components for a web application, the frontend, and the backend.
+Energy Burden is defined as “the percentage of gross household income spent on energy costs” (energy.gov).  We not only want to better understand how energy burden fluctuates but also want to expand the community knowledge base. This way our research and exploration are accessible to everyone.
 
-The frontend (client side) is everything that a user can see on a website. The overall layout of the website, colors, fonts, buttons, textboxes, forms, etc and how the user will end up interacting with the application or site. They design the presentation of the website.
+Research papers can be inaccessible to the public, they can be paywalled, hard to understand or even find. Additionally, research by nature is consistently being updated. Therefore, how can we provide one resource that everyone can keep coming back to and is always updated?
 
-The backend or (server side) is everything that is happening underneath that the user doesn’t see or notice. This entails everything from opening connections and includes but is not limited to storing, analyzing, and organizing data.
+**WEB APPLICATIONS!**
 
-When you access a web application you are interacting with the front end.
+## Why are web applications useful?
+A web application is an interactive resource that can be easily, shared and updated. A web application allows its users to explore the data at their own pace and pursue their own lines of inquiry. This provides a great opportunity for further community engagement and communication.
 
-<img src={useBaseUrl('/img/user_to_ui.svg')}/>
+A web application aligns well with our goals for greater communication and interaction with the community. This is actually one of the reason the Department of Energy has already created a web application outlining energy burden in the US, its called the <a href='https://www.energy.gov/eere/slsc/maps/lead-tool'>DOE LEAD tool</a>. We will be modeling our bootcamp tool to mirror some of its capabilities.
 
-The frontend takes your inputs (username, password, filter options, text) and information and passes it onto the backend.
+## Why are we using R and RShiny
+The main issues that plague web application development are **complexity** and **maintainability**. If we make the application extremely complicated then developing the application will take a long time and can be prone to errors. Additionally finding these errors or bugs becomes harder as well. Therefore not only will development process take long and be more intensive, but maintaing and updating it will become an more a challenging task. Many projects are simply abandoned because the developer who created the application leaves the team, and there isn't someone else readily capable of making even simple changes.
 
-<img src={useBaseUrl('/img/ui_to_server.svg')}/>
-
-The backend then takes the information sent to it and responds with the data or analysis that you requested.
-
-<img src={useBaseUrl('/img/server_to_ui.svg')}/>
-
-The front end accepts this information and presents it correctly to you.
-
-<img src={useBaseUrl('/img/ui_to_user.svg')}/>
-
-## What we will be creating
-
-We will be creating a web application with R and the RShiny and tidyverse packages. Our web application with serve to visualize and present data from the Inter-American Development Bank. Here is a <a href='https://rahulab.shinyapps.io/RShiny_data_analytics_example/'>link</a> to finished version of the application we will be creating.
-
-- RShiny is an R package that makes it easy to build web applications in R.
-    - We will be using RShiny to manage our frontend and backend.
-- Tidyverse is a collection of R packages that built to make data science easier in R.
-    - We will be using tidyverse to clean, analyze and create our data visualizations.
+Many research teams and faculty are already familiar with the R statistics and coding language. However rarely have the time to learn more coding languages and frameworks, so web application development might seem daunting or impractical. This is where **RShiny** comes into play. RShiny is an R package that lets you easily create and deploy web applications built in R. This lets researchers use their existing coding knowledge and scripts to create their own web applciations. **Now you can easily integrate the same code that you use to create graphs for research papers for your own web applications.**
