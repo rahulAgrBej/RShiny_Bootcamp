@@ -187,6 +187,10 @@ getData <- function(filePath) {
 # returns a plot of energy burden based on user selected variable
 energyBurdenBarChart <- function(data, userSelectedVariable) {
   
+  # replaces spaces with underscores to match dataset format
+  userSelectedVariable <- gsub(' ', '_', userSelectedVariable)
+  userSelectedVariable <- gsub('\\/', '_', userSelectedVariable)
+  
   # filter the data to only include points for a particular variable
   filteredData <- data %>%
     filter(str_detect(Indicator, userSelectedVariable))
@@ -198,10 +202,14 @@ energyBurdenBarChart <- function(data, userSelectedVariable) {
                  names_to='Energy_Type',
                  values_to='Energy_Burden')
   
+  # color palette for our bar chart
+  colorPalette <- c('#22577A', '#38A3A5', '#57CC99', '#80ED99', '#C7F9CC')
+  
   # Making the final stacked bar chart
-  p <- ggplot(filteredData, aes(x=Indicator_Segment, y=Energy_Burden, fill=Energy_Type)) +
-    geom_bar(stat='identity') + 
-    theme(legend.position='bottom')
+  p <- ggplot(filteredData, aes(x=Indicator_Segment, y=Energy_Burden, fill=Energy_Type)) + # defines X and Y axis
+    geom_bar(stat='identity') + # creates bar chart
+    theme(legend.position='bottom') + # legend on the bottom
+    scale_fill_manual(values=colorPalette) # specifying our color palette
   
   return(p)
 }
@@ -267,6 +275,10 @@ getData <- function(filePath) {
 # returns a plot of energy burden based on user selected variable
 energyBurdenBarChart <- function(data, userSelectedVariable) {
   
+  # replaces spaces with underscores to match dataset format
+  userSelectedVariable <- gsub(' ', '_', userSelectedVariable)
+  userSelectedVariable <- gsub('\\/', '_', userSelectedVariable)
+  
   # filter the data to only include points for a particular variable
   filteredData <- data %>%
     filter(str_detect(Indicator, userSelectedVariable))
@@ -278,10 +290,14 @@ energyBurdenBarChart <- function(data, userSelectedVariable) {
                  names_to='Energy_Type',
                  values_to='Energy_Burden')
   
+  # color palette for our bar chart
+  colorPalette <- c('#22577A', '#38A3A5', '#57CC99', '#80ED99', '#C7F9CC')
+  
   # Making the final stacked bar chart
-  p <- ggplot(filteredData, aes(x=Indicator_Segment, y=Energy_Burden, fill=Energy_Type)) +
-    geom_bar(stat='identity') + 
-    theme(legend.position='bottom')
+  p <- ggplot(filteredData, aes(x=Indicator_Segment, y=Energy_Burden, fill=Energy_Type)) + # defines X and Y axis
+    geom_bar(stat='identity') + # creates bar chart
+    theme(legend.position='bottom') + # legend on the bottom
+    scale_fill_manual(values=colorPalette) # specifying our color palette
   
   return(p)
 }
