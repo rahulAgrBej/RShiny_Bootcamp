@@ -14,7 +14,6 @@ Along the way we will be developing the following skillset:
 - High level understanding of how a web application works
 - Familiarity and comfort with RShiny to create web applications
 - Understanding of how to use tidyverse to clean and standardize data
-- Introduction to agile development/ feedback/testing development processes
 
 ### Useful Prerequisites (but **NOT** required)
 - R experience
@@ -35,20 +34,18 @@ Below please find an overview of the lessons and resources we will be using thro
             <td>Introduction</td>
             <td>
                 <ul>
-                    <li>Overview of what we will be building</li>
-                    <li>What is RShiny</li>
-                    <li>Going through setup and installation</li>
+                    <li>Why are web applications useful?</li>
+                    <li>Exploring our case study</li>
                 </ul></td>
             <td></td>
         </tr>
         <tr>
-            <td>RShiny Server and UI</td>
+            <td>RShiny Basics</td>
             <td>
                 <ul>
-                    <li>What is the server, what does it do?</li>
-                    <li>What is the UI, what does it do?</li>
-                    <li>RShiny dashboard example and build</li>
-                    <li>RShiny widget and implementation</li>
+                    <li>Installation and Setup</li>
+                    <li>Building UI basics</li>
+                    <li>Interactive Widgets</li>
                 </ul></td>
             <td>
                 <ul>
@@ -57,25 +54,13 @@ Below please find an overview of the lessons and resources we will be using thro
                 </ul></td>
         </tr>
         <tr>
-            <td>RShiny, tidyverse and ggplot2</td>
+            <td>Our Data and Server</td>
             <td>
                 <ul>
-                    <li>What is tidyverse? Why is it useful?</li>
-                    <li>tidyverse operations</li>
-                    <li>Introduction to ggplot2</li>
-                    <li>Build and return first graph</li>
-                </ul></td>
-            <td>
-                <ul>
-                    <li>tidyverse resources</li>
-                    <li>ggplot2 resources</li>
-                </ul></td>
-        </tr>
-        <tr>
-            <td>Organizing and Deploying</td>
-            <td>
-                <ul>
-                    <li>Organizing your files</li>
+                    <li>Data Cleaning</li>
+                    <li>Creating Graphs</li>
+                    <li>Server Basics</li>
+                    <li>Connecting Server and UI</li>
                 </ul></td>
             <td></td>
         </tr>
