@@ -22,8 +22,3 @@ barGenerate <- function(data, inputIndicator) {
     geom_bar(stat='identity')
   return(p)
 }
-
-data <- getData('data/lead-tool-chart-data.csv')
-test1 <- data[3:5]
-test <- barGenerate(data, 'Federal_Poverty_Level')
-plot(test)

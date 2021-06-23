@@ -1,5 +1,4 @@
 library(tidyverse)
-library(shiny)
 library(tidyr)
 library(ggplot2)
 
@@ -61,13 +60,7 @@ energyBurdenBarChart <- function(data, userSelectedVariable) {
   return(p)
 }
 
-server <- function(input, output) {
-  
-  dataInput <- reactive({
-    getData('data/lead-tool-chart-data.csv')
-  })
-  
-  output$energyBurdenBarChartID <- renderPlot({
-    energyBurdenBarChart(dataInput(), input$variableChoiceID)
-  })
-}
+fp <- 'data/lead-tool-chart-data.csv'
+data <- getData(fp)
+p <- energyBurdenBarChart(data, 'Federal Poverty Level')
+plot(p)
