@@ -4,14 +4,14 @@ title: 3.0 - Data and Graphs
 sidebar_position: 5
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl'
- 
+
 ## Goals
 - Clean Data
 - Format Data to use for Graphs
 - Create a graph based on input
  
 In this section we will be constructing a graph based on a clean dataset without any web application components. Create another R script file called "`test.R`".
- 
+
 ## Exploring our data
  
 [Download the sample  data here](https://msc-public.s3.amazonaws.com/lead-tool-chart-data.csv) (a snapshot of data is shown below).
@@ -24,7 +24,7 @@ Overall our data contains 6 columns:
 - Avg. Energy Burden (% Income) (Electricity): % income spent on electricity
 - Avg. Energy Burden (% Income) (Gas): % income spent on gas
 - Avg. Energy Burden (% Income) (other): % income spent on other forms of energy
- 
+
 ## Cleaning data
  
 First we will create a simple script that just reads in our excel file into a data frame in R.
@@ -32,20 +32,20 @@ First we will create a simple script that just reads in our excel file into a da
 library(tidyverse)
 library(tidyr)
 library(ggplot2)
- 
+
 # function that retrieves data based on a file path
 getData <- function(filePath) {
   data <- read_csv(filePath)
   return(data)
 }
- 
+
 fp <- 'data/lead-tool-chart-data.csv'
 data <- getData(fp)
 ```
 Press "Run". On the right-hand side under "Global Environment" you can see what the "data" variable looks like:
  
 <img src={useBaseUrl('/img/R_raw_data.png')}/>
- 
+
 While the data looks very similar, if not the same, as our spreadsheet preview, this format can cause a few complications in R. It currently might have spaces, forward or back slashes, colons, dollar signs, percent signs etc. This has the potential to cause R to get confused when referencing the different values so we will need to “clean” the data to get it to an R friendly format.
  
 Code cleaning, while tedious, can save hours of looking for a bug later on when R gets confused with how your data is formatted!
@@ -70,7 +70,7 @@ Below is a script that cleans column headers:
 library(tidyverse)
 library(tidyr)
 library(ggplot2)
- 
+
 # function that retrieves data based on a file path
 getData <- function(filePath) {
   # reads in the data
@@ -83,21 +83,22 @@ getData <- function(filePath) {
  names(data) <- gsub('\\)', '', names(data)) # eliminates closing parenthesis
   return(data)
 }
- 
+
 fp <- 'data/lead-tool-chart-data.csv'
 data <- getData(fp)
 ```
 Press "Run". Now the column headers are formatted in an R-friendly way.
  
 <img src={useBaseUrl('/img/data_headers_clean.png')}/>
- 
+
+
 Now we can begin cleaning the individual column values. In our case we will have to do this for the "Indicator" and "Indicator_Segment" columns. The script below now cleans column headers, and the "Indicator" and "Indicator_Segment" column values.
  
 ```r
 library(tidyverse)
 library(tidyr)
 library(ggplot2)
- 
+
 # function that retrieves data based on a file path
 getData <- function(filePath) {
   # reads in the data
@@ -120,16 +121,17 @@ getData <- function(filePath) {
  data$Indicator_Segment <- gsub('\\/', '_', data$Indicator_Segment) # replaces forward slashes with underscores
   return(data)
 }
- 
+
 fp <- 'data/lead-tool-chart-data.csv'
 data <- getData(fp)
 ```
 Here is a snapshot showing how some values in the "Indicator" and "Indicator_Segment" have changed.
  
 <img src={useBaseUrl('/img/data_cleaned.png')}/>
- 
+
+
 Now that we have cleaned our data we can go ahead and start analyzing and visualizing it.
- 
+
 ## Creating a Graph
  
 When visualizing data we have to ask "what is the goal of our analysis and web application?"
@@ -147,7 +149,7 @@ There are a few things this bar chart generating function needs to do:
 library(tidyverse)
 library(tidyr)
 library(ggplot2)
- 
+
 # function that retrieves data based on a file path
 getData <- function(filePath) {
   # reads in the data
@@ -170,7 +172,7 @@ getData <- function(filePath) {
  data$Indicator_Segment <- gsub('\\/', '_', data$Indicator_Segment) # replaces forward slashes with underscores
   return(data)
 }
- 
+
 # returns a plot of energy burden based on user selected variable
 energyBurdenBarChart <- function(data, userSelectedVariable) {
   # replaces spaces with underscores to match dataset format
@@ -194,7 +196,7 @@ energyBurdenBarChart <- function(data, userSelectedVariable) {
    scale_fill_manual(values=colorPalette) # specifying our color palette
   return(p)
 }
- 
+
 fp <- 'data/lead-tool-chart-data.csv'
 data <- getData(fp)
 p <- energyBurdenBarChart(data, 'Federal Poverty Level')
@@ -217,14 +219,14 @@ Sample Plot (specifying Federal Poverty Level as user selected variable):
 <img src={useBaseUrl('/img/barChart.png')}/>
  
 Reference the full file below:
- 
+
 ## test.R
  
 ```r
 library(tidyverse)
 library(tidyr)
 library(ggplot2)
- 
+
 # function that retrieves data based on a file path
 getData <- function(filePath) {
   # reads in the data
