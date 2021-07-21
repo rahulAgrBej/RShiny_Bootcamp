@@ -4,19 +4,19 @@ title: 2.0 - RShiny Installation and Basics
 sidebar_position: 3
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl'
- 
+
 ## Goals
 - R Shiny setup and Installation
 - Build UI skeleton
  
 ## Setup
- 
+
 :::note
  
 If you already have RStudio and are familiar with setting up your working environment, directory, and installing R packages, you can skip this step.
  
 :::
- 
+
 - We will be doing all of our coding through the RStudio application, which can be downloaded and installed through <a href='https://www.rstudio.com/products/rstudio/'>this link</a>.
 - For each of the following packages, write this into your console: `install.packages("PACKAGE NAME HERE BETWEEN QUOTES")`:    - shiny
    - shinydashboard
@@ -26,7 +26,7 @@ If you already have RStudio and are familiar with setting up your working enviro
  
 Example: installing R packages
 <img src={useBaseUrl('/img/R_install_package_example.png')}/>
- 
+
 ## R Shiny web application initial setup
  
 At its base RShiny needs two files to function: `server.R` and `ui.R` (spelled exactly like that). As seen previously, the `server.R` file will handle all data access and analysis and `ui.R` will handle the overall web application layout and inputs.
@@ -34,11 +34,12 @@ At its base RShiny needs two files to function: `server.R` and `ui.R` (spelled e
 For now we will be focusing on `ui.R`, however, we need a bare-bones version of `server.R` for our web application to do anything.
 1. Create two files `server.R` and `ui.R`
 2. copy paste the code below into `server.R` (we will go over specifics of what this is later)
+
 ```r
 library(shiny)
 library(tidyverse)
 library(ggplot2)
- 
+
 server <- function(input, output) {
  
 }
@@ -48,6 +49,7 @@ server <- function(input, output) {
 Now we will start building our overall web application structure and layout with `ui.R`, we will be following a <a href='https://rstudio.github.io/shinydashboard/index.html'>dashboard type structure</a> (see below)
  
 <img src={useBaseUrl('/img/rshiny_dashboard_example.png')}/>
+
  
 ### Create an empty dashboard
  
@@ -57,27 +59,29 @@ Let’s start with an empty dashboard template, here we will be defining a ui va
 - a `dashboardBody`
  
 These are all empty right now but we will be filling them out shortly.
+
 ```r
 library(shiny)
 library(shinydashboard)
 library(shinyWidgets)
- 
- 
+
 ui <- dashboardPage(
  dashboardHeader(),
  dashboardSidebar(),
  dashboardBody()
 )
 ```
+
 Press the "Run App" button on the top right of your RStudio application.
 <img src={useBaseUrl('/img/empty_dashboard.png')}/>
+
 Lets give our web application a title, 'Energy Burden Analysis'.
  
 ```r
 library(shiny)
 library(shinydashboard)
 library(shinyWidgets)
- 
+
 ui <- dashboardPage(
  dashboardHeader(title='Energy Burden Analysis'),
  dashboardSidebar(),
@@ -85,8 +89,9 @@ ui <- dashboardPage(
 )
 ```
 Press the "Run App" button. Now our dashboard has a title.
+
 <img src={useBaseUrl('/img/dashboard_title.png')}/>
- 
+
 ### Build the sidebar
  
 Next let's start populating the sidebar. All sidebars need a sidebar menu object. This `sidebarMenu` object contains menuItems. Each `menuItem` represents a different tab on the sidebar that will take you to a different page. A `menuItem` has two required components: a name and a `tabName`. The `menuItem`’s name, such as “Overview”, is what will be visible to the user. The `tabName`, ”`overviewID`” in this case, is a unique identifier referring to a `tabItem` that will eventually end up being one of our pages. 
@@ -99,7 +104,7 @@ Note that we have also created a different variable called "sidebar" to contain 
 library(shiny)
 library(shinydashboard)
 library(shinyWidgets)
- 
+
 sidebar <- dashboardSidebar(
  sidebarMenu(
    menuItem('Overview', tabName='overviewTab')
@@ -114,15 +119,16 @@ ui <- dashboardPage(
 ```
 Press the "Run App" button. Note that our sidebar now has an “overview” link, but there still isn’t any content in it.
 <img src={useBaseUrl('/img/sidebar_overview_link.png')}/>
- 
+
 ### Adding an overview page
  
 Next we are going to add content to the overview page. All content goes in the `dashboardBody`. In the dashboard structure the body consists of different `tabItems`, you can think of these as the individual pages.
  
 tabItems can be structured in a lot of different ways, however each `tabItem` is required to contain a `tabName`, and this needs to be the same as the tabName that you wrote in your sidebar menuItem. This is how RShiny knows where to send the user when they click on a particular tab.
- 
+
+
 For our web application we want to have an Overview page describing the project in some more detail. For structure we will be dividing our Overview page into different horizontal rows called fluidRows. Think of layout our page as a set of shelves. Each `fluidRow` is one shelf and everything in one shelf exists at the same height. On the first fluidRow (or shelf) we will be putting in a box, think of this as an organizational box dividing up the current shelf. In this box we will put an h1 header, that will contain the title, “Energy Burden & the DOE LEAD tool”, and a placeholder description, “Overview content will go here.”.
- 
+
 ### Our code so far
  
 ```r
@@ -165,30 +171,30 @@ Press "Run App". Now our overview tab has some initial content:
 This is the basic structure that we will be following. For each page we will create a new tabItem and add it to our overall UI structure.
  
 For reference here are the complete ui.R and server.R files we have so far:
- 
+
 ## server.R
 ```r
 library(shiny)
 library(tidyverse)
 library(ggplot2)
- 
+
 server <- function(input, output) {
  
 }
 ```
- 
+
 ## ui.R
 ```r
 library(shiny)
 library(shinydashboard)
 library(shinyWidgets)
- 
+
 sidebar <- dashboardSidebar(
  sidebarMenu(
    menuItem('Overview', tabName='overviewTab')
  )
 )
- 
+
 overviewTab <- tabItem(
    tabName='overviewTab',
    fluidRow(
