@@ -4,7 +4,7 @@ title: 2.1 - Making RShiny interactive
 sidebar_position: 4
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl'
- 
+
 ## Goals
 - Understand what a “widget” is
 - Create a new page
@@ -41,7 +41,7 @@ overviewTab <- tabItem(
    )
  )
 )
- 
+
 variableAnalysisTab <- tabItem(
  tabName='variableAnalysisID',
  fluidRow(
@@ -69,7 +69,7 @@ ui <- dashboardPage(
 Press "Run App". Now that we have added content to our Variable Analysis tab/page you can click on the link in the sidebar to change the page you are looking at.
  
 <img src={useBaseUrl('/img/variable_page_no_widget.png')}/>
- 
+
 ## Creating Dropdown Menu
  
 Now let's add our dropdown menu. For any general widget there are three things that have to be included:
@@ -100,7 +100,7 @@ variableAnalysisTab <- tabItem(
 Press "Run App" and you should have a dropdown where the user can select a specific variable to look at.
  
 <img src={useBaseUrl('/img/variable_w_dropdown.png')}/>
- 
+
 Find a copy of the full `ui.R` file below:
  
 ## ui.R
@@ -109,7 +109,7 @@ Find a copy of the full `ui.R` file below:
 library(shiny)
 library(shinydashboard)
 library(shinyWidgets)
- 
+
 sidebar <- dashboardSidebar(
  sidebarMenu(
    menuItem('Overview', tabName='overviewTab'),
